@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.salonmaster.salonmaster.studnet_managemnt.Controller.AdminPanel">
+    <VBox fx:id="sideBar" prefHeight="700.0" prefWidth="220.0" style="-fx-background-color: #152364;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: transparent transparent white transparent;;" />
+        <Pane prefHeight="6.0" prefWidth="220.0" />
+        <Button fx:id="dashBoard" mnemonicParsing="false" prefWidth="220.0" stylesheets="@CSS/Style.css" text="Dashboard">
+            <styleClass>
+                <String fx:value="sidebar-button" />
+                <String fx:value="active" />
+            </styleClass>
+        </Button>
+      <Pane prefHeight="6.0" prefWidth="220.0" />
+      <Button fx:id="admission" mnemonicParsing="false" onAction="#admission" prefWidth="220.0" styleClass="sidebar-button" stylesheets="@CSS/Style.css" text="Addmission form" />
+    </VBox>
+    <TextField fx:id="searchFeild" layoutX="248.0" layoutY="59.0" prefWidth="403.0" promptText="Search for a student by name or email" styleClass="search-field" stylesheets="@CSS/Style.css" />
+    <Pane layoutX="250.0" layoutY="59.0" prefHeight="35.0" prefWidth="33.0" styleClass="search-icon" stylesheets="@CSS/Style.css">
+        <children>
+          <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@media/search.png" />
+              </image>
+          </ImageView>
+        </children>
+    </Pane>
+    <TableView fx:id="studentTable" layoutX="248.0" layoutY="114.0" prefHeight="548.0" prefWidth="720.0" stylesheets="@CSS/Style.css">
+      <columns>
+          <TableColumn fx:id="id" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="153.0" text="NAME" />
+          <TableColumn fx:id="rollno" prefWidth="73.0" text="ROLL_NO" />
+          <TableColumn fx:id="department" prefWidth="143.0" text="DEPARTMENT" />
+          <TableColumn fx:id="email" prefWidth="149.0" text="EMAIL" />
+          <TableColumn fx:id="phone" prefWidth="98.0" text="PHONE" />
+          <TableColumn fx:id="marks" prefWidth="67.0" text="MARKS" />
+      </columns>
+    </TableView>
+</AnchorPane>
